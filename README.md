@@ -13,7 +13,8 @@ Checkly monitors for three personal public JSON-RPC nodes.
 Each check POSTs `eth_blockNumber` and expects HTTP 200, a non-empty `result`, and no JSON-RPC 
 `error`. Checks run every 15 minutes from London, N. Virginia, and Singapore (round-robin).
 
-The public dashboard is [kgapos-rpc.checkly-dashboards.com](https://kgapos-rpc.checkly-dashboards.com). It shows the three checks tagged `kgapos-rpc`.
+The public dashboard is [status.kgapos.com](https://status.kgapos.com) 
+([kgapos-rpc.checkly-dashboards.com](https://kgapos-rpc.checkly-dashboards.com)).
 
 ## Setup
 
@@ -38,10 +39,11 @@ npx checkly deploy
 
 ## GitHub
 
-`CHECKLY_API_KEY` is a secret on the `production` environment. `CHECKLY_ACCOUNT_ID` is a repository 
-variable. Both workflows select that environment:
+`CHECKLY_API_KEY` is a secret on the `production` environment. 
+`CHECKLY_ACCOUNT_ID` is a repository variable. 
 
-- Pull requests that change checks, config, or the workflows run `.github/workflows/ci.yml`: deploy preview, then a remote test session.
-- Pushes of those same paths to `main` run `.github/workflows/cd.yml`: `checkly deploy --force`.
-
-README, images, and other docs do not run either workflow.
+- Pull requests that change checks, config, or the workflows run `.github/workflows/ci.yml`:
+  - deploy preview
+  - remote test session
+- Pushes of those same paths to `main` run `.github/workflows/cd.yml`: 
+  - deploy to checkly
