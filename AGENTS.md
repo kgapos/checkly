@@ -35,6 +35,10 @@ Pass means HTTP 200, non-empty `$.result`, and no `error` key. Shared defaults l
 
 `logicalId` is the Checkly identity. Renames go in `name`. Changing `logicalId` recreates the check and drops its history.
 
+## Dashboard
+
+`__checks__/dashboard.check.ts` is the one public dashboard at `https://kgapos-rpc.checkly-dashboards.com`. It selects the `kgapos-rpc` tag. Hobby allows one public dashboard: no private dashboards, incidents, or custom CSS.
+
 ## CI/CD
 
 - `.github/workflows/ci.yml` — pull requests: `checkly deploy --preview`, then `checkly test`.

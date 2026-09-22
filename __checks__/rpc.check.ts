@@ -28,6 +28,7 @@ const targets = [
 for (const target of targets) {
   new ApiCheck(target.logicalId, {
     name: target.name,
+    tags: ["kgapos-rpc"],
     // Hobby does not include automatic retries.
     retryStrategy: RetryStrategyBuilder.noRetries(),
     request: {
