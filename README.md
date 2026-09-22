@@ -1,3 +1,5 @@
+![Project banner](./.github/assets/project-banner.png)
+
 # Checkly monitoring
 
 Checkly monitors for three personal public JSON-RPC nodes.
