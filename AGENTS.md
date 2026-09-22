@@ -44,6 +44,8 @@ Pass means HTTP 200, non-empty `$.result`, and no `error` key. Shared defaults l
 - `.github/workflows/ci.yml` — pull requests: `checkly deploy --preview`, then `checkly test`.
 - `.github/workflows/cd.yml` — push to `main`: `checkly deploy --force`.
 
+Both workflows run only when checks, Checkly config, package files, `tsconfig.json`, or the workflows themselves change. README, images, and other docs do not trigger a deploy.
+
 Both jobs set `environment: production` so they can read the `CHECKLY_API_KEY` environment secret. `CHECKLY_ACCOUNT_ID` is a repository variable.
 
 ## Skill

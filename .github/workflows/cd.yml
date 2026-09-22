@@ -3,6 +3,13 @@ name: CD
 on:
   push:
     branches: [main]
+    paths:
+      - "__checks__/**"
+      - "checkly.config.ts"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - ".github/workflows/**"
 
 permissions:
   contents: read

@@ -1,3 +1,5 @@
+![Project banner](./.github/assets/project-banner.png)
+
 # Checkly monitoring
 
 Checkly monitors for three personal public JSON-RPC nodes.
@@ -39,5 +41,7 @@ npx checkly deploy
 `CHECKLY_API_KEY` is a secret on the `production` environment. `CHECKLY_ACCOUNT_ID` is a repository 
 variable. Both workflows select that environment:
 
-- Pull requests run `.github/workflows/ci.yml`: deploy preview, then a remote test session.
-- Pushes to `main` run `.github/workflows/cd.yml`: `checkly deploy --force`.
+- Pull requests that change checks, config, or the workflows run `.github/workflows/ci.yml`: deploy preview, then a remote test session.
+- Pushes of those same paths to `main` run `.github/workflows/cd.yml`: `checkly deploy --force`.
+
+README, images, and other docs do not run either workflow.
