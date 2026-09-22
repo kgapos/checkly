@@ -37,7 +37,7 @@ Pass means HTTP 200, non-empty `$.result`, and no `error` key. Shared defaults l
 
 ## Dashboard
 
-`__checks__/dashboard.check.ts` is the one public dashboard at `https://kgapos-rpc.checkly-dashboards.com`. It selects the `kgapos-rpc` tag. Hobby allows one public dashboard: no private dashboards, incidents, or custom CSS.
+`__checks__/dashboard.check.ts` is the one public dashboard at `https://status.kgapos.com` (`customDomain`) and `https://kgapos-rpc.checkly-dashboards.com`. It selects the `kgapos-rpc` tag. DNS needs a CNAME from `status.kgapos.com` to `checkly-dashboards.com`. Hobby allows one public dashboard: no private dashboards, incidents, or custom CSS.
 
 ## CI/CD
 
