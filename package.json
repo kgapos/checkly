@@ -1,0 +1,16 @@
+{
+  "name": "kgapos-checkly",
+  "private": true,
+  "description": "Checkly monitors for personal public RPC nodes",
+  "scripts": {
+    "typecheck": "tsc --project tsconfig.json",
+    "test": "checkly test"
+  },
+  "devDependencies": {
+    "checkly": "9.5.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
