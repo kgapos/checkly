@@ -37,7 +37,7 @@ Pass means HTTP 200, non-empty `$.result`, and no `error` key. Shared defaults l
 
 ## Dashboard
 
-`__checks__/dashboard.check.ts` is the one public dashboard at `https://kgapos-rpc.checkly-dashboards.com`. It selects the `kgapos-rpc` tag. Hobby allows one public dashboard: no private dashboards, incidents, or custom CSS.
+`__checks__/dashboard.check.ts` is the one public dashboard at `https://kgapos-rpc.checkly-dashboards.com`. It selects the `kgapos-rpc` tag. `custom.css` hides the Checkly footer logo. Hobby allows one public dashboard and does not include private dashboards, incidents, or the `DASHBOARD_CUSTOMCSS` entitlement, so a deploy can reject the stylesheet until that flag is enabled.
 
 ## CI/CD
 

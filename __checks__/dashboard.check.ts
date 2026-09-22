@@ -8,4 +8,5 @@ new Dashboard("kgapos-rpc-dashboard", {
   hideTags: true,
   paginate: false,
   refreshRate: 60,
+  customCSS: { entrypoint: "../custom.css" },
 });
