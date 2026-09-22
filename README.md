@@ -11,6 +11,8 @@ Checkly monitors for three personal public JSON-RPC nodes.
 Each check POSTs `eth_blockNumber` and expects HTTP 200, a non-empty `result`, and no JSON-RPC 
 `error`. Checks run every 15 minutes from London, N. Virginia, and Singapore (round-robin).
 
+The public dashboard is [kgapos-rpc.checkly-dashboards.com](https://kgapos-rpc.checkly-dashboards.com). It shows the three checks tagged `kgapos-rpc`.
+
 ## Setup
 
 ```bash
